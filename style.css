@@ -7,6 +7,10 @@
 html {
   scroll-behavior: smooth;
 }
+ html, body {
+    background: transparent;
+    overflow: hidden;
+  }
 body {
       font-family: 'Montserrat', sans-serif;
     }
