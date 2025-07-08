@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .timer-floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px 30px 30px;
+      text-align: center;
+      color: #3b146a;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+    .timer-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      color: #3b146a;
+      cursor: pointer;
+    }
+    .timer-title {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 1vw;
+    }
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-size: 2rem;
+    }
+    .segment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 60px;
+    }
+    .digit {
+      background: #3b146a28;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .digit span {
+      display: inline-block;
+      width: 0.7em;
+      text-align: center;
+    }
+    .last-digit {
+      display: inline-flex;
+      gap: 0.1em;
+    }
+    .last-digit-inner.animate {
+      animation: slideUp 0.4s ease;
+    }
+    @keyframes slideUp {
+      0% { transform: translateY(100%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .label {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .anchor-button {
+      margin-top: 20px;
+      background-color: #3b146a;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    @media (max-width: 500px) {
+      .timer {
+        font-size: 1.5rem;
+      }
+      .segment {
+        min-width: 45px;
+      }
+       .timer-floating {
+      bottom: 0;
+      right: 0;
+    
+    }
+
+    .timer-title {
+      margin-bottom: 3vw;
+    }
+    }
