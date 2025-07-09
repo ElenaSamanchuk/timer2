@@ -30,7 +30,7 @@ body {
   height: 90%;
   position: fixed;
   background: #3b146a;
-  border-radius: 1vw;
+  border-radius: 10vw;
   padding: 1vw;
   box-shadow: 0 0 1vw rgba(255, 255, 255, 0.1);
   z-index: 2000;
@@ -80,7 +80,7 @@ body {
 .digit {
   background: #ffffff6b;
   padding: 3vw;
-  border-radius: 1vw;
+  border-radius: 10vw;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -119,7 +119,7 @@ body {
   color: #fff;
   padding: 2vw 4vw;
   border: none;
-  border-radius: 0.5vw;
+  border-radius: 10vw;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
