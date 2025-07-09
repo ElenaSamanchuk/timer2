@@ -13,26 +13,32 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: "MuseoSansCyrl", Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
 }
 .timer-floating {
+  width: 90%;
+  height: 90%;
   position: fixed;
-  bottom: 1vw;
-  right: 1vw;
   background: #3b146a;
   border-radius: 1vw;
   padding: 1vw;
-  box-shadow: 0 0 1vw rgba(255, 255, 255, .1);
+  box-shadow: 0 0 1vw rgba(255, 255, 255, 0.1);
   z-index: 2000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  animation: fade-in .3s ease-out;
+  animation: fade-in 0.3s ease-out;
 }
 @keyframes fade-in {
   from {
@@ -40,8 +46,8 @@ body {
     opacity: 0;
   }
   to {
-transform: translateY(0);
-opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .timer-close {
@@ -50,13 +56,14 @@ opacity: 1;
   right: 1vw;
   background: transparent;
   border: none;
-  font-size: 1vw;
+  font-size: 3vw;
   color: #ffffff;
   cursor: pointer;
 }
-.timer-title{
+.timer-title {
   width: 80%;
   margin: 1vw 0;
+  font-size: 3vw;
 }
 .timer {
   display: flex;
@@ -72,24 +79,25 @@ opacity: 1;
 }
 .digit {
   background: #ffffff6b;
-  padding: 1vw;
+  padding: 3vw;
   border-radius: 1vw;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 10vw;
 }
 .digit span {
   display: inline-block;
-  width: .8vw;
+  width: 6vw;
 }
 .last-digit {
   display: inline-flex;
-  gap: .1vw;
+  gap: 0.1vw;
 }
 .last-digit-inner.animate {
-  animation: slideUp .4s ease;
+  animation: slideUp 0.4s ease;
 }
 @keyframes slideUp {
   from {
@@ -102,66 +110,36 @@ opacity: 1;
   }
 }
 .label {
-  opacity: .8;
-  font-size: .8vw;
-  margin: .5vw 0 1vw;
+  opacity: 0.8;
+  font-size: 2vw;
+  margin: 0.5vw 0 1vw;
 }
 .anchor-button {
   background-color: #ff1a6c;
   color: #fff;
-  padding: .5vw 2vw;
+  padding: 2vw 4vw;
   border: none;
-  border-radius: .5vw;
+  border-radius: 0.5vw;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  font-size: 1vw;
-  margin: 0 0 .3vw;
+  font-size: 2vw;
+  margin: 0 0 0.3vw;
 }
 @media (max-width: 800px) {
- .timer-title{
-  font-size: 1.5vw;
-}
-.label {
-  font-size: 1.1vw;
-}
-.anchor-button {
-  font-size: 1.5vw;
-}
-.digit span {
-  width: 1.3vw;
-}
-.timer-close {
-  font-size: 2vw;
-}
 }
 @media (max-width: 500px) {
-  .timer-title{
-  font-size: 3vw;
-}
-.label {
-  font-size: 2.5vw;
-}
-.anchor-button {
-  font-size: 3vw;
-  padding: 2vw 3vw;
-}
-.digit span {
-  width: 2.5vw;
-}
-.timer-close {
-  font-size: 5vw;
-}
-.timer-floating {
-  width: 60vw;
-  height: 25vh;
-  bottom: 4vw;
-  right: 1vw;
-}
-.timer {
-  gap: 3vw;
-}
-.digit {
-  padding: 3vw;
-}
+  .timer-close {
+    font-size: 5vw;
+  }
+  .timer-title {
+    font-size: 5vw;
+  }
+  .label {
+    font-size: 3vw;
+  }
+  .anchor-button {
+    padding: 3vw 5vw;
+    font-size: 4vw;
+  }
 }
