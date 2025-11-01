@@ -1,7 +1,7 @@
 document.querySelector(".timer-floating").style.display = "none";
 setTimeout(() => {
     document.querySelector(".timer-floating").style.display = "flex";
-}, 20000);
+}, 2000);
 const endDate = new Date("2025-11-27T23:59:59");
 function getWordForm(n, forms) {
   return forms[
@@ -64,5 +64,6 @@ function updateTimer() {
   previousLastDigit = secondRight;
 }
 setInterval(updateTimer, 1000);
+
 
 
