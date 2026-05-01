@@ -2,7 +2,7 @@ document.querySelector(".timer-floating").style.display = "none";
 setTimeout(() => {
     document.querySelector(".timer-floating").style.display = "flex";
 }, 2000);
-const endDate = new Date("2025-11-27T23:59:59");
+const endDate = new Date("2026-05-27T23:59:59");
 function getWordForm(n, forms) {
   return forms[
     n % 10 === 1 && n % 100 !== 11
